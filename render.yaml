@@ -3,12 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
+    dockerImage: n8nio/n8n
     autoDeploy: true
-    dockerCommand: "n8n start"
-    envVars:
-      - key: N8N_PORT
-        value: 5678
-      - key: N8N_HOST
-        value: 0.0.0.0
-      - key: WEBHOOK_URL
-        value: https://n8n-c45m.onrender.com
+    ports:
+      - port: 5678
